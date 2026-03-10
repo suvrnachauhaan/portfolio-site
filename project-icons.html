@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>200 Icons. One System. — Suvarna Chauhan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="cdot"></div>
+<div id="cring"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-name" href="index.html">Suvarna Chauhan</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#brain">Contact</a>
+    </div>
+    <button class="theme-btn" id="themeToggle">
+      <span id="themeIcon">○</span>
+      <span id="themeLabel">Light</span>
+    </button>
+  </div>
+</nav>
+
+<!-- PROJECT HERO -->
+<section class="proj-hero">
+  <a href="index.html#work" class="proj-back"><span class="back-arrow">←</span> Back to Work</a>
+  <div class="proj-hero-meta">
+    <span class="proj-num">02</span>
+    <span class="proj-year">2024</span>
+    <span class="proj-tag">Design Systems</span>
+  </div>
+  <h1 class="proj-title">200 Icons. One System.</h1>
+  <p class="proj-subtitle">Built a scalable icon library — one visual language, infinitely extendable.</p>
+</section>
+
+<!-- PROJECT CONTENT -->
+<div class="proj-content">
+
+  <div class="proj-section">
+    <div class="proj-label">Overview</div>
+    <div class="proj-text">
+      <p>The product had 200+ icons sourced from 4 different libraries, 3 freelancers, and a grab bag of one-off SVGs. No consistent stroke width. No shared grid. No naming convention. Every new feature meant hunting for an icon that "sort of" matched.</p>
+      <p>I was tasked with building a unified icon system from scratch — one that could scale with the product and be used consistently across web, mobile, and marketing.</p>
+    </div>
+  </div>
+
+  <div class="proj-img-full">
+    <div class="proj-img-placeholder">
+      <span>Icon Grid — Full Library Overview</span>
+    </div>
+  </div>
+
+  <div class="proj-section">
+    <div class="proj-label">The Problem</div>
+    <div class="proj-text">
+      <p>Inconsistency was everywhere. Some icons were filled, others outlined. Stroke widths ranged from 1px to 2.5px. Corner radii varied. Optical sizing was ignored — a 16px icon scaled to 24px looked muddy; a 24px icon at 16px lost detail.</p>
+      <p>Developers were spending time tweaking SVGs inline. Designers were redrawing icons per project. There was no single source of truth.</p>
+    </div>
+  </div>
+
+  <div class="proj-two-col">
+    <div class="proj-img-placeholder"><span>Before — Inconsistent Icon Samples</span></div>
+    <div class="proj-img-placeholder"><span>After — Unified Grid & Style</span></div>
+  </div>
+
+  <div class="proj-section">
+    <div class="proj-label">Process</div>
+    <div class="proj-text">
+      <p><strong>Audit:</strong> Catalogued every icon in the product across platforms. Found 214 unique icons, 47 near-duplicates, and 31 that were used exactly once.</p>
+      <p><strong>Grid & Rules:</strong> Designed a 24×24 grid with 2px padding, 1.5px stroke width, 2px corner radius, and round caps. Every icon follows the same optical weight rules.</p>
+      <p><strong>Drawing:</strong> Redrew all 200+ icons by hand in Figma, following the new spec. Each icon was tested at 16px, 24px, and 32px for clarity.</p>
+      <p><strong>Delivery:</strong> Built a Figma component library with variants (outline/filled), exported optimized SVGs, and wrote usage guidelines for the engineering team.</p>
+    </div>
+  </div>
+
+  <div class="proj-img-full">
+    <div class="proj-img-placeholder">
+      <span>Icon Spec Sheet — Grid, Stroke, Sizing Rules</span>
+    </div>
+  </div>
+
+  <div class="proj-section">
+    <div class="proj-label">Results</div>
+    <div class="proj-stats">
+      <div class="proj-stat"><div class="proj-stat-n">200+</div><div class="proj-stat-l">Icons designed on a unified grid</div></div>
+      <div class="proj-stat"><div class="proj-stat-n">47</div><div class="proj-stat-l">Duplicates eliminated</div></div>
+      <div class="proj-stat"><div class="proj-stat-n">3×</div><div class="proj-stat-l">Faster icon implementation for devs</div></div>
+      <div class="proj-stat"><div class="proj-stat-n">1</div><div class="proj-stat-l">Single source of truth</div></div>
+    </div>
+  </div>
+
+  <div class="proj-section">
+    <div class="proj-label">Reflection</div>
+    <div class="proj-text">
+      <p>Icons feel small. They're not. They're the visual vocabulary of your product. When they're inconsistent, everything feels slightly off — even if users can't articulate why. Building this system taught me that craft at the atomic level compounds across every screen.</p>
+    </div>
+  </div>
+
+  <!-- NEXT PROJECT -->
+  <div class="proj-next">
+    <div class="proj-next-label">Next Project</div>
+    <a href="project-motion.html" class="proj-next-link">Motion with Purpose →</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

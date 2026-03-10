@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion with Purpose — Suvarna Chauhan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="cdot"></div>
+<div id="cring"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-name" href="index.html">Suvarna Chauhan</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#brain">Contact</a>
+    </div>
+    <button class="theme-btn" id="themeToggle">
+      <span id="themeIcon">○</span>
+      <span id="themeLabel">Light</span>
+    </button>
+  </div>
+</nav>
+
+<!-- PROJECT HERO -->
+<section class="proj-hero">
+  <a href="index.html#work" class="proj-back"><span class="back-arrow">←</span> Back to Work</a>
+  <div class="proj-hero-meta">
+    <span class="proj-num">03</span>
+    <span class="proj-year">2023</span>
+    <span class="proj-tag">Animation · Rive</span>
+  </div>
+  <h1 class="proj-title">Motion with Purpose</h1>
+  <p class="proj-subtitle">Used Rive to make animation that earns its place. Not decoration — direction.</p>
+</section>
+
+<!-- PROJECT CONTENT -->
+<div class="proj-content">
+
+  <div class="proj-section">
+    <div class="proj-label">Overview</div>
+    <div class="proj-text">
+      <p>A fintech app wanted to add "delight" to their product. Their first instinct: Lottie confetti on every success state. My counter-proposal: purposeful motion that guides attention, communicates state changes, and reduces cognitive load.</p>
+      <p>I used Rive to create interactive animations that responded to user input — not just decorative loops, but functional motion that made the interface feel alive and responsive.</p>
+    </div>
+  </div>
+
+  <div class="proj-img-full">
+    <div class="proj-img-placeholder">
+      <span>Animation Showcase — Key Interactions</span>
+    </div>
+  </div>
+
+  <div class="proj-section">
+    <div class="proj-label">The Problem</div>
+    <div class="proj-text">
+      <p>The app felt static. State changes were jarring — screens swapped with no transition, loading states were generic spinners, and success/error feedback was limited to text banners. Users reported the app felt "cold" despite a warm visual identity.</p>
+      <p>The team wanted animation but had no framework for when, where, or how much motion was appropriate.</p>
+    </div>
+  </div>
+
+  <div class="proj-two-col">
+    <div class="proj-img-placeholder"><span>Motion Principles Document</span></div>
+    <div class="proj-img-placeholder"><span>Animation Decision Framework</span></div>
+  </div>
+
+  <div class="proj-section">
+    <div class="proj-label">Process</div>
+    <div class="proj-text">
+      <p><strong>Audit:</strong> Mapped every state change in the app — 34 transitions, 12 loading states, 8 success/error moments. Prioritized the top 15 based on frequency and user impact.</p>
+      <p><strong>Principles:</strong> Defined a motion language: ease-out for entrances (welcoming), ease-in for exits (decisive), spring curves for interactive feedback (alive). Duration rule: nothing over 400ms.</p>
+      <p><strong>Rive:</strong> Built state machines in Rive for the 6 most complex interactions — including a payment confirmation that responds to success/failure with different animations driven by the same state machine.</p>
+      <p><strong>Handoff:</strong> Exported Rive files with clear state machine documentation. Worked with devs to implement runtime control via Rive's web runtime.</p>
+    </div>
+  </div>
+
+  <div class="proj-img-full">
+    <div class="proj-img-placeholder">
+      <span>Rive State Machine — Payment Confirmation Flow</span>
+    </div>
+  </div>
+
+  <div class="proj-section">
+    <div class="proj-label">Results</div>
+    <div class="proj-stats">
+      <div class="proj-stat"><div class="proj-stat-n">15</div><div class="proj-stat-l">Key transitions animated</div></div>
+      <div class="proj-stat"><div class="proj-stat-n">6</div><div class="proj-stat-l">Rive state machines shipped</div></div>
+      <div class="proj-stat"><div class="proj-stat-n">+18%</div><div class="proj-stat-l">Perceived performance improvement</div></div>
+      <div class="proj-stat"><div class="proj-stat-n">0</div><div class="proj-stat-l">Confetti animations added</div></div>
+    </div>
+  </div>
+
+  <div class="proj-section">
+    <div class="proj-label">Reflection</div>
+    <div class="proj-text">
+      <p>Motion is a design material, not a garnish. The hardest part wasn't making things move — it was deciding what shouldn't move. Restraint is what separates purposeful animation from visual noise.</p>
+    </div>
+  </div>
+
+  <!-- NEXT PROJECT -->
+  <div class="proj-next">
+    <div class="proj-next-label">Next Project</div>
+    <a href="project-research.html" class="proj-next-link">Research First, Always →</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
