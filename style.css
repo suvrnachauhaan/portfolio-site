@@ -523,6 +523,9 @@ nav.filled{
 .why-illus{width:142px;max-width:100%;margin:0 0 .9rem;display:flex;flex-direction:column;align-items:flex-start;}
 .why-illus svg{width:100%;height:auto;display:block;}
 .why-illus path,.why-illus circle{fill:none;stroke:color-mix(in srgb,var(--accent-2) 72%, var(--fg));stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.why-illus-solver path,.why-illus-solver circle{stroke:color-mix(in srgb,var(--accent-2) 82%, #1a2b3a);}
+.why-illus-learner path,.why-illus-learner circle{stroke:color-mix(in srgb,var(--accent-3) 78%, #2a2e4f);}
+.why-illus-human path,.why-illus-human circle{stroke:color-mix(in srgb,var(--accent) 78%, #3a2b4a);}
 .why-num{font-size:.58rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.15rem;font-weight:600;}
 .why-title-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.52rem;}
 .why-doodle{font-size:1.2rem;line-height:1;color:var(--accent);font-weight:700;transform:rotate(-12deg);}
