@@ -3,13 +3,34 @@ function initPageLoader(){
   if(document.getElementById('pageLoader')) return;
 
   const doodles=[
-    `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="14" y="26" width="30" height="20" rx="4"/><path d="M44 31h5a5 5 0 0 1 0 10h-5"/><path d="M20 22c0-3 2-4 2-7"/><path d="M27 22c0-3 2-4 2-7"/></svg>`,
-    `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="18" width="44" height="30" rx="3"/><path d="M18 18v-6m10 6v-6m10 6v-6m10 6v-6"/><path d="M18 30h8m4 0h16m-28 8h20"/></svg>`,
-    `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M35 18a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10 10 10 0 0 1-10-10v-6a10 10 0 0 1 10-10z"/><path d="M20 31v3a15 15 0 0 0 30 0v-3"/><path d="M35 49v7"/><path d="M28 56h14"/></svg>`,
-    `<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="31" cy="12" r="4"/><path d="M31 16v14"/><path d="M31 25l-12 8"/><path d="M31 25l11 7"/><path d="M31 30l-8 14"/><path d="M31 30l12 15"/></svg>`,
-    `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 20h18v30H12z"/><path d="M30 22h20v28H30z"/><path d="M15 26h12m-12 7h12m18-6h-9m9 7h-9"/></svg>`,
-    `<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="10"/><path d="M32 12v8m0 24v8m20-20h-8m-24 0h-8m26.2-14.2-5.7 5.7m-12.9 12.9-5.7 5.7m24.3 0-5.7-5.7m-12.9-12.9-5.7-5.7"/></svg>`,
-    `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 26c4 0 4 4 8 4s4-4 8-4 4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4"/><path d="M10 36c4 0 4 4 8 4s4-4 8-4 4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4"/></svg>`
+    {
+      svg:`<svg viewBox="0 0 96 96" aria-hidden="true"><path d="M22 44h40a8 8 0 0 1 8 8v8a12 12 0 0 1-12 12H34a12 12 0 0 1-12-12z"/><path d="M69 52h7a8 8 0 0 1 0 16h-6"/><path d="M34 41c0-6 4-8 4-14"/><path d="M46 41c0-6 4-8 4-14"/><path d="M19 72h50"/></svg>`,
+      caption:'Brewing coffee and loading pixels.'
+    },
+    {
+      svg:`<svg viewBox="0 0 96 96" aria-hidden="true"><rect x="14" y="20" width="68" height="50" rx="5"/><path d="M24 20v-9m16 9v-9m16 9v-9m16 9v-9"/><path d="M25 37h16m6 0h23M25 50h13m5 0h30M25 61h34"/></svg>`,
+      caption:'Scanning film frames for visual rhythm.'
+    },
+    {
+      svg:`<svg viewBox="0 0 96 96" aria-hidden="true"><rect x="40" y="16" width="16" height="36" rx="8"/><path d="M32 36v9a16 16 0 0 0 32 0v-9"/><path d="M48 61v16"/><path d="M36 77h24"/><path d="M28 24l8 3m32-3-8 3"/></svg>`,
+      caption:'Mic check: clarity, timing, confidence.'
+    },
+    {
+      svg:`<svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="47" cy="18" r="6"/><path d="M47 24v20"/><path d="M47 35 27 48"/><path d="M47 35 66 48"/><path d="M47 44 34 70"/><path d="M47 44 63 73"/><path d="M20 74h56"/></svg>`,
+      caption:'Theatre energy, now in interaction form.'
+    },
+    {
+      svg:`<svg viewBox="0 0 96 96" aria-hidden="true"><path d="M18 24h28v50H18z"/><path d="M46 27h32v47H46z"/><path d="M24 33h16m-16 10h16m-16 10h14m28-17H54m12 10H54m12 10H54"/></svg>`,
+      caption:'Turning notes, books, and sketches into systems.'
+    },
+    {
+      svg:`<svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="14"/><path d="M48 18v11m0 38v11m30-30H67m-38 0H18m50.6-20.6-8 8m-25.2 25.2-8 8m41.2 0-8-8m-25.2-25.2-8-8"/></svg>`,
+      caption:'Catching sunlight before opening Figma.'
+    },
+    {
+      svg:`<svg viewBox="0 0 96 96" aria-hidden="true"><path d="M14 45c6 0 6 6 12 6s6-6 12-6 6 6 12 6 6-6 12-6 6 6 12 6 6-6 12-6"/><path d="M14 58c6 0 6 6 12 6s6-6 12-6 6 6 12 6 6-6 12-6 6 6 12 6 6-6 12-6"/><path d="M18 74h60"/></svg>`,
+      caption:'Good waves, good stories, good design.'
+    }
   ];
 
   document.body.classList.add('is-loading');
@@ -17,62 +38,78 @@ function initPageLoader(){
   loader.id='pageLoader';
   loader.innerHTML=`
     <div class="loader-box" role="status" aria-live="polite" aria-label="Loading page">
-      <div class="loader-doodle" id="loaderDoodle">${doodles[0]}</div>
+      <div class="loader-doodle" id="loaderDoodle">${doodles[0].svg}</div>
       <div class="loader-percent" id="loaderPercent">0%</div>
       <div class="loader-text">Loading portfolio</div>
+      <div class="loader-caption" id="loaderCaption">${doodles[0].caption}</div>
     </div>
   `;
   document.body.prepend(loader);
 
   const percentEl=document.getElementById('loaderPercent');
   const doodleEl=document.getElementById('loaderDoodle');
+  const captionEl=document.getElementById('loaderCaption');
 
   let iconIdx=0;
   const iconTimer=setInterval(()=>{
     iconIdx=(iconIdx+1)%doodles.length;
-    doodleEl.innerHTML=doodles[iconIdx];
-  },620);
+    if(captionEl) captionEl.classList.add('switching');
+    setTimeout(()=>{
+      doodleEl.innerHTML=doodles[iconIdx].svg;
+      if(captionEl){
+        captionEl.textContent=doodles[iconIdx].caption;
+        captionEl.classList.remove('switching');
+      }
+    },140);
+  },1650);
 
   let progress=0;
-  let target=8;
+  let target=3;
   let finished=false;
+  let canFinish=false;
 
   const progressTimer=setInterval(()=>{
-    if(progress<target){
+    if(progress<target && Math.random()>.24){
       progress=Math.min(progress+1,target);
       percentEl.textContent=`${progress}%`;
     }
-    if(finished && progress>=100){
+    if(finished && canFinish && progress>=100){
       clearInterval(progressTimer);
       clearInterval(iconTimer);
       loader.classList.add('done');
       setTimeout(()=>{
         loader.remove();
         document.body.classList.remove('is-loading');
-      },520);
+      },620);
     }
-  },22);
+  },56);
 
   const driftTimer=setInterval(()=>{
-    if(finished){
+    if(finished && canFinish){
       target=100;
       clearInterval(driftTimer);
       return;
     }
-    target=Math.min(92,target+Math.floor(Math.random()*10)+4);
-  },180);
+    target=Math.min(95,target+Math.floor(Math.random()*3)+1);
+  },460);
+
+  setTimeout(()=>{
+    canFinish=true;
+    if(finished) target=100;
+  },7600);
 
   window.addEventListener('load',()=>{
     finished=true;
-    target=100;
+    if(canFinish) target=100;
   },{once:true});
 
   setTimeout(()=>{
     if(!finished){
       finished=true;
+      canFinish=true;
       target=100;
     }
-  },3600);
+  },12000);
 }
 
 if(document.readyState==='loading'){

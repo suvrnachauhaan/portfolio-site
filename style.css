@@ -86,31 +86,37 @@ body::before{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:.9rem;
-  min-width:220px;
+  gap:.85rem;
+  min-width:260px;
 }
 .loader-doodle{
-  width:112px;
-  height:112px;
+  width:132px;
+  height:132px;
   border:1px dashed rgba(26,22,20,0.32);
   border-radius:999px;
-  background:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.7);
   display:grid;
   place-items:center;
+  box-shadow:0 8px 26px rgba(0,0,0,0.08);
+  animation:loaderBob 3.2s ease-in-out infinite;
 }
 .loader-doodle svg{
-  width:64px;
-  height:64px;
+  width:84px;
+  height:84px;
   stroke:#141414;
-  stroke-width:2.2;
+  stroke-width:2;
   fill:none;
   stroke-linecap:round;
   stroke-linejoin:round;
-  animation:doodleSwap .45s var(--ease);
+  animation:doodleSwap .7s var(--ease);
 }
 @keyframes doodleSwap{
   from{opacity:.2;transform:scale(.86) rotate(-6deg);}
   to{opacity:1;transform:scale(1) rotate(0deg);}
+}
+@keyframes loaderBob{
+  0%,100%{transform:translateY(0);} 
+  50%{transform:translateY(-6px);} 
 }
 .loader-percent{
   font-family:var(--font-display);
@@ -126,6 +132,18 @@ body::before{
   text-transform:uppercase;
   font-weight:600;
   color:rgba(20,20,20,0.72);
+}
+.loader-caption{
+  max-width:320px;
+  min-height:1.8em;
+  font-size:.83rem;
+  line-height:1.6;
+  color:rgba(20,20,20,0.72);
+  transition:opacity .3s var(--ease),transform .3s var(--ease);
+}
+.loader-caption.switching{
+  opacity:.25;
+  transform:translateY(2px);
 }
 
 #progress{
