@@ -45,7 +45,6 @@ body{
   transition:background var(--tr),color var(--tr);
   -webkit-font-smoothing:antialiased;
 }
-body.is-loading{overflow:hidden;}
 body::before{
   content:'';
   position:fixed;
@@ -54,96 +53,6 @@ body::before{
   opacity:.17;
   pointer-events:none;
   z-index:9000;
-}
-
-#pageLoader{
-  position:fixed;
-  inset:0;
-  z-index:12000;
-  display:grid;
-  place-items:center;
-  background:#f8f4ec;
-  isolation:isolate;
-  opacity:1;
-  transition:opacity .5s var(--ease),visibility .5s var(--ease);
-}
-#pageLoader::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,rgba(26,22,20,0.07) 1px,transparent 1px) 0 0/28px 28px,
-    linear-gradient(0deg,rgba(26,22,20,0.07) 1px,transparent 1px) 0 0/28px 28px,
-    radial-gradient(circle at 50% 20%,rgba(47,107,100,0.13),transparent 50%),
-    radial-gradient(circle at 80% 80%,rgba(217,93,57,0.1),transparent 48%);
-  opacity:.62;
-  z-index:-1;
-}
-#pageLoader.done{opacity:0;visibility:hidden;}
-
-.loader-box{
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:.85rem;
-  min-width:260px;
-}
-.loader-doodle{
-  width:132px;
-  height:132px;
-  border:1px dashed rgba(26,22,20,0.32);
-  border-radius:999px;
-  background:rgba(255,255,255,0.7);
-  display:grid;
-  place-items:center;
-  box-shadow:0 8px 26px rgba(0,0,0,0.08);
-  animation:loaderBob 3.2s ease-in-out infinite;
-}
-.loader-doodle svg{
-  width:84px;
-  height:84px;
-  stroke:#141414;
-  stroke-width:2;
-  fill:none;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  animation:doodleSwap .7s var(--ease);
-}
-@keyframes doodleSwap{
-  from{opacity:.2;transform:scale(.86) rotate(-6deg);}
-  to{opacity:1;transform:scale(1) rotate(0deg);}
-}
-@keyframes loaderBob{
-  0%,100%{transform:translateY(0);} 
-  50%{transform:translateY(-6px);} 
-}
-.loader-percent{
-  font-family:var(--font-display);
-  font-size:clamp(2rem,4vw,3.3rem);
-  line-height:1;
-  font-weight:700;
-  color:#141414;
-  letter-spacing:-.03em;
-}
-.loader-text{
-  font-size:.72rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-weight:600;
-  color:rgba(20,20,20,0.72);
-}
-.loader-caption{
-  max-width:320px;
-  min-height:1.8em;
-  font-size:.83rem;
-  line-height:1.6;
-  color:rgba(20,20,20,0.72);
-  transition:opacity .3s var(--ease),transform .3s var(--ease);
-}
-.loader-caption.switching{
-  opacity:.25;
-  transform:translateY(2px);
 }
 
 #progress{
