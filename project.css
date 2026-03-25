@@ -43,6 +43,7 @@
   display:grid;grid-template-columns:200px 1fr;gap:3rem;
   padding:3rem 0;border-top:1px solid var(--border);
 }
+.proj-section>.proj-text:only-child{grid-column:1/-1;}
 .proj-label{
   font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;
   color:var(--accent);font-weight:500;padding-top:.25rem;

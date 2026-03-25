@@ -135,6 +135,22 @@ const obs=new IntersectionObserver(entries=>{
 },{threshold:0.08});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 
+// WHY CARDS FLIP ON CLICK
+const whyCards=document.querySelectorAll('.why-card');
+if(whyCards.length){
+  whyCards.forEach(card=>{
+    card.addEventListener('click',()=>{
+      card.classList.toggle('is-flipped');
+    });
+    card.addEventListener('keydown',e=>{
+      if(e.key==='Enter' || e.key===' '){
+        e.preventDefault();
+        card.classList.toggle('is-flipped');
+      }
+    });
+  });
+}
+
 // WORK TABS
 const workTabs=document.querySelectorAll('.work-tab');
 if(workTabs.length){
