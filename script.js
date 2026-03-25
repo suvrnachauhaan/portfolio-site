@@ -1,5 +1,10 @@
 // PAGE LOADER
 function initPageLoader(){
+  const skipOnce=sessionStorage.getItem('skip-loader-once')==='1';
+  if(skipOnce){
+    sessionStorage.removeItem('skip-loader-once');
+    return;
+  }
   if(document.getElementById('pageLoader')) return;
 
   const doodles=[
@@ -61,10 +66,10 @@ function initPageLoader(){
         captionEl.classList.remove('switching');
       }
     },140);
-  },1650);
+  },900);
 
   let progress=0;
-  let target=3;
+  let target=10;
   let finished=false;
   let canFinish=false;
 
@@ -82,7 +87,7 @@ function initPageLoader(){
         document.body.classList.remove('is-loading');
       },620);
     }
-  },56);
+  },28);
 
   const driftTimer=setInterval(()=>{
     if(finished && canFinish){
@@ -90,13 +95,13 @@ function initPageLoader(){
       clearInterval(driftTimer);
       return;
     }
-    target=Math.min(95,target+Math.floor(Math.random()*3)+1);
-  },460);
+    target=Math.min(96,target+Math.floor(Math.random()*7)+4);
+  },220);
 
   setTimeout(()=>{
     canFinish=true;
     if(finished) target=100;
-  },7600);
+  },2200);
 
   window.addEventListener('load',()=>{
     finished=true;
@@ -109,7 +114,7 @@ function initPageLoader(){
       canFinish=true;
       target=100;
     }
-  },12000);
+  },6500);
 }
 
 if(document.readyState==='loading'){
@@ -117,6 +122,13 @@ if(document.readyState==='loading'){
 }else{
   initPageLoader();
 }
+
+// Skip loader for next navigation when opening project pages.
+document.querySelectorAll('a[href^="project-"]').forEach(link=>{
+  link.addEventListener('click',()=>{
+    sessionStorage.setItem('skip-loader-once','1');
+  });
+});
 
 // THEME
 const html=document.documentElement;
