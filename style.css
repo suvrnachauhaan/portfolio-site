@@ -471,6 +471,67 @@ nav.filled{
 .work-panel{display:none;}
 .work-panel.active{display:block;}
 
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1rem;
+}
+.work-card{
+  text-decoration:none;
+  color:inherit;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:color-mix(in srgb,var(--surface) 92%, transparent);
+  box-shadow:var(--shadow);
+  transition:transform var(--tr),border-color var(--tr),box-shadow var(--tr);
+  display:flex;
+  flex-direction:column;
+  min-height:280px;
+}
+.work-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in srgb,var(--accent) 45%, var(--border));
+  box-shadow:0 14px 32px rgba(73,48,35,0.15);
+}
+.work-thumb{
+  position:relative;
+  width:100%;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  border-bottom:1px solid var(--border);
+}
+.work-thumb img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:saturate(.9) contrast(1.04);
+  transition:transform .5s var(--ease);
+}
+.work-card:hover .work-thumb img{transform:scale(1.04);}
+.work-meta{padding:.85rem .9rem 1rem;display:flex;flex-direction:column;gap:.55rem;}
+.work-title{
+  font-family:var(--font-display);
+  font-size:1.02rem;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:-.01em;
+}
+.work-tags{display:flex;gap:.38rem;flex-wrap:wrap;}
+.work-tags span{
+  font-size:.58rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--muted);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:.2rem .48rem;
+  background:var(--surface);
+}
+
 .project-mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;}
 .project-row{
   grid-column:span 6;
@@ -642,6 +703,7 @@ footer{max-width:1160px;margin:0 auto;padding:3rem;border-top:1px dashed var(--b
 }
 
 @media(max-width:1024px){
+  .work-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   .project-row{grid-column:span 12;}
   .project-row.feature-xl,.project-row.feature-wide,.project-row.feature-tall{grid-column:span 12;min-height:220px;}
   .p-right{position:static;text-align:left;margin-top:.8rem;}
@@ -661,6 +723,7 @@ footer{max-width:1160px;margin:0 auto;padding:3rem;border-top:1px dashed var(--b
   .hero-like{font-size:.68rem;padding:.34rem .58rem;}
   .hero-foot{grid-template-columns:1fr 1fr;gap:1rem;}
   .hero-tags{display:none;}
+  .work-grid{grid-template-columns:1fr;}
   .s-wrap{padding:4rem 1.4rem;}
   .about-grid,.brain-header{grid-template-columns:1fr;gap:2.5rem;}
   .about-manifesto{position:static;}
