@@ -111,6 +111,22 @@ if(cdot&&cring){
   });
 }
 
+// PROJECT CARD TILT
+const tiltCards=document.querySelectorAll('[data-tilt="true"]');
+tiltCards.forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const rect=card.getBoundingClientRect();
+    const px=(e.clientX-rect.left)/rect.width;
+    const py=(e.clientY-rect.top)/rect.height;
+    const rx=(py-.5)*-4;
+    const ry=(px-.5)*5;
+    card.style.transform=`translateY(-3px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='';
+  });
+});
+
 // FADE IN
 const obs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{

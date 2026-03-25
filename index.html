@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suvarna Chauhan — UI/UX Designer</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,100&family=IBM+Plex+Sans:wght@300;400;500;600&family=Special+Elite&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,6 +32,9 @@
 <!-- HERO -->
 <section id="hero">
   <svg id="hero-grid" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+  <div class="float-tag ft-1">Designer + Systems Thinker</div>
+  <div class="float-tag ft-2">Films, theatre, human stories</div>
+  <div class="float-tag ft-3">Master's in Design</div>
   <div class="grid-mark" id="gm1"></div>
   <div class="grid-mark" id="gm2"></div>
   <div class="grid-mark" id="gm3"></div>
@@ -81,14 +84,17 @@
 <!-- WORK -->
 <div class="s-wrap" id="work">
   <div class="section-label fade-up">Selected Work</div>
+  <p class="section-intro fade-up">A curated mix of product depth, systems clarity, and narrative-led experiences.</p>
 
   <div class="work-tabs fade-up" role="tablist" aria-label="Project Categories">
-    <button class="work-tab active" role="tab" aria-selected="true" data-target="work-uiux">UI/UX Projects</button>
-    <button class="work-tab" role="tab" aria-selected="false" data-target="work-misc">Miscellaneous Projects</button>
+    <button class="work-tab active" role="tab" aria-selected="true" data-target="work-uiux">Product &amp; Experience</button>
+    <button class="work-tab" role="tab" aria-selected="false" data-target="work-misc">Systems &amp; Strategy</button>
+    <button class="work-tab" role="tab" aria-selected="false" data-target="work-culture">Culture &amp; Narrative</button>
   </div>
 
   <div id="work-uiux" class="work-panel active" role="tabpanel">
-    <a href="project-website-design-ui.html" class="project-row fade-up">
+    <div class="project-mosaic">
+    <a href="project-website-design-ui.html" class="project-row feature-xl fade-up" data-tilt="true">
       <div class="p-thumb">
         <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80" alt="Website Design UI thumbnail" loading="lazy" />
         <div class="p-thumb-bg"></div>
@@ -97,14 +103,15 @@
         <div class="p-num">01</div>
         <div class="p-title">Website Design UI</div>
         <div class="p-line">A modern responsive web experience focused on conversion and visual hierarchy.</div>
+        <div class="p-cta">View Case Study →</div>
       </div>
       <div class="p-right">
         <div class="p-year">2025</div>
-        <div class="p-tag">UI/UX</div>
+        <div class="p-tag">Product &amp; Experience</div>
       </div>
     </a>
 
-    <a href="project-bookworm-app-ui.html" class="project-row fade-up">
+    <a href="project-bookworm-app-ui.html" class="project-row feature-tall fade-up" data-tilt="true">
       <div class="p-thumb">
         <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Bookworm App UI thumbnail" loading="lazy" />
         <div class="p-thumb-bg"></div>
@@ -113,30 +120,15 @@
         <div class="p-num">02</div>
         <div class="p-title">Bookworm App UI</div>
         <div class="p-line">A reading companion app that improves discovery, progress tracking, and retention.</div>
+        <div class="p-cta">View Case Study →</div>
       </div>
       <div class="p-right">
         <div class="p-year">2025</div>
-        <div class="p-tag">Mobile UI</div>
+        <div class="p-tag">Product &amp; Experience</div>
       </div>
     </a>
 
-    <a href="project-eco-scrabble-game.html" class="project-row fade-up">
-      <div class="p-thumb">
-        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80" alt="Eco Scrabble Game thumbnail" loading="lazy" />
-        <div class="p-thumb-bg"></div>
-      </div>
-      <div class="p-mid">
-        <div class="p-num">03</div>
-        <div class="p-title">Eco Scrabble Game</div>
-        <div class="p-line">An educational word game that rewards sustainable vocabulary and learning loops.</div>
-      </div>
-      <div class="p-right">
-        <div class="p-year">2024</div>
-        <div class="p-tag">Game UX</div>
-      </div>
-    </a>
-
-    <a href="project-marriage-game.html" class="project-row fade-up">
+    <a href="project-marriage-game.html" class="project-row feature-wide fade-up" data-tilt="true">
       <div class="p-thumb">
         <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Marriage Game thumbnail" loading="lazy" />
         <div class="p-thumb-bg"></div>
@@ -145,32 +137,36 @@
         <div class="p-num">04</div>
         <div class="p-title">Marriage Game</div>
         <div class="p-line">A social party game flow designed for shared play, surprise, and replayability.</div>
+        <div class="p-cta">View Case Study →</div>
       </div>
       <div class="p-right">
         <div class="p-year">2024</div>
-        <div class="p-tag">Interaction Design</div>
+        <div class="p-tag">Product &amp; Experience</div>
       </div>
     </a>
+    </div>
   </div>
 
   <div id="work-misc" class="work-panel" role="tabpanel" hidden>
-    <div class="project-row fade-up">
+    <div class="project-mosaic">
+    <a href="project-eco-scrabble-game.html" class="project-row feature-xl fade-up" data-tilt="true">
       <div class="p-thumb">
-        <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80" alt="Campus event microsite thumbnail" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80" alt="Eco Scrabble Game thumbnail" loading="lazy" />
         <div class="p-thumb-bg"></div>
       </div>
       <div class="p-mid">
-        <div class="p-num">M1</div>
-        <div class="p-title">Campus Event Microsite</div>
-        <div class="p-line">Quick-launch informational website with registration flow and dynamic schedule blocks.</div>
+        <div class="p-num">03</div>
+        <div class="p-title">Eco Scrabble Game</div>
+        <div class="p-line">An educational word game that rewards sustainable vocabulary and learning loops.</div>
+        <div class="p-cta">View Case Study →</div>
       </div>
       <div class="p-right">
         <div class="p-year">2024</div>
-        <div class="p-tag">Web Build</div>
+        <div class="p-tag">Systems &amp; Strategy</div>
       </div>
-    </div>
+    </a>
 
-    <div class="project-row fade-up">
+    <div class="project-row feature-tall fade-up" data-tilt="true">
       <div class="p-thumb">
         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Design system starter kit thumbnail" loading="lazy" />
         <div class="p-thumb-bg"></div>
@@ -179,14 +175,36 @@
         <div class="p-num">M2</div>
         <div class="p-title">Design System Starter Kit</div>
         <div class="p-line">Reusable color, type, spacing, and component tokens for fast product scaffolding.</div>
+        <div class="p-cta">Preview →</div>
       </div>
       <div class="p-right">
         <div class="p-year">2023</div>
-        <div class="p-tag">Systems</div>
+        <div class="p-tag">Systems &amp; Strategy</div>
       </div>
     </div>
 
-    <div class="project-row fade-up">
+    <div class="project-row feature-wide fade-up" data-tilt="true">
+      <div class="p-thumb">
+        <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80" alt="Campus event microsite thumbnail" loading="lazy" />
+        <div class="p-thumb-bg"></div>
+      </div>
+      <div class="p-mid">
+        <div class="p-num">M1</div>
+        <div class="p-title">Campus Event Microsite</div>
+        <div class="p-line">Quick-launch informational website with registration flow and dynamic schedule blocks.</div>
+        <div class="p-cta">Preview →</div>
+      </div>
+      <div class="p-right">
+        <div class="p-year">2024</div>
+        <div class="p-tag">Systems &amp; Strategy</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="work-culture" class="work-panel" role="tabpanel" hidden>
+    <div class="project-mosaic">
+    <div class="project-row feature-xl fade-up" data-tilt="true">
       <div class="p-thumb">
         <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80" alt="Poster and campaign graphics thumbnail" loading="lazy" />
         <div class="p-thumb-bg"></div>
@@ -195,11 +213,30 @@
         <div class="p-num">M3</div>
         <div class="p-title">Poster and Campaign Graphics</div>
         <div class="p-line">A print and social campaign suite with a consistent visual language and motion variants.</div>
+        <div class="p-cta">Preview →</div>
       </div>
       <div class="p-right">
         <div class="p-year">2023</div>
-        <div class="p-tag">Visual Design</div>
+        <div class="p-tag">Culture &amp; Narrative</div>
       </div>
+    </div>
+
+    <a href="project-bookworm-app-ui.html" class="project-row feature-wide fade-up" data-tilt="true">
+      <div class="p-thumb">
+        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Bookworm App UI thumbnail" loading="lazy" />
+        <div class="p-thumb-bg"></div>
+      </div>
+      <div class="p-mid">
+        <div class="p-num">02</div>
+        <div class="p-title">Bookworm App UI</div>
+        <div class="p-line">A reading companion app that improves discovery, progress tracking, and retention.</div>
+        <div class="p-cta">View Case Study →</div>
+      </div>
+      <div class="p-right">
+        <div class="p-year">2025</div>
+        <div class="p-tag">Culture &amp; Narrative</div>
+      </div>
+    </a>
     </div>
   </div>
 </div>
@@ -300,6 +337,36 @@
         <div class="ab-label">When I'm Not Designing</div>
         <div class="ab-text">Pursuing my Master's. Noticing bad kerning on menus. Rewatching a UI transition because something's slightly off. Occasionally touching grass.</div>
       </div>
+      <div class="ab-block fade-up">
+        <div class="ab-label">What Shapes My Eye</div>
+        <div class="ab-text">Textiles, films, live stand-up, theatre, and human relationships. I love observing the rhythm in how people speak, move, and react — then translating that nuance into digital experiences.</div>
+      </div>
+      <div class="ab-block fade-up">
+        <div class="ab-label">Currently Into</div>
+        <div class="ab-text">Narrative-driven product interactions, cinematic transitions, and systems that still feel emotionally warm.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEYOND THE SCREEN -->
+<div class="s-wrap" id="beyond" style="padding-top:0;padding-bottom:6rem;">
+  <div class="section-label fade-up">Beyond the Screen</div>
+  <div class="beyond-shell fade-up">
+    <div class="beyond-title">Where my design energy really comes from.</div>
+    <div class="beyond-grid">
+      <article class="beyond-card" data-note="I will pause a film to inspect a transition.">
+        <h3>Films</h3>
+        <p>Cinematography, title sequences, pacing, and visual storytelling constantly shape how I think about interface emotion.</p>
+      </article>
+      <article class="beyond-card" data-note="Yes, timing is everything.">
+        <h3>Theatre &amp; Stand-Up</h3>
+        <p>Live performance keeps me sensitive to rhythm, anticipation, and how tiny details change audience response.</p>
+      </article>
+      <article class="beyond-card" data-note="Pattern, texture, contrast — same language, different medium.">
+        <h3>Textiles &amp; Culture</h3>
+        <p>Textural thinking and cultural narratives influence my color, composition, and storytelling decisions.</p>
+      </article>
     </div>
   </div>
 </div>
@@ -310,9 +377,10 @@
   <div class="footer-r fade-up">
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/suvarnachauhan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="#">Behance</a>
+      <a href="https://www.behance.net/suvarnachauhan" target="_blank" rel="noopener noreferrer">Behance</a>
       <a href="mailto:hi@suvarna.design">Email</a>
     </div>
+    <div class="footer-note">Built with structure, edited with instinct, finished with care.</div>
     <div class="footer-copy" data-note="If you read this, you're officially a details person.">© Suvarna Chauhan, 2025</div>
   </div>
 </footer>
