@@ -150,6 +150,20 @@ nav.filled{background:var(--bg);border-bottom:1px solid var(--border);}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border);}
 
 /* WORK — thumbnail rows */
+.work-tabs{
+  display:flex;gap:.55rem;margin-bottom:1.3rem;
+}
+.work-tab{
+  border:1px solid var(--border);background:transparent;
+  color:var(--muted);font-family:var(--font-sans);
+  font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.4rem .9rem;border-radius:999px;transition:all var(--tr);
+}
+.work-tab:hover{color:var(--fg);border-color:var(--fg);}
+.work-tab.active{background:var(--fg);color:var(--bg);border-color:var(--fg);}
+.work-panel{display:none;}
+.work-panel.active{display:block;}
+
 .project-row{
   display:grid;grid-template-columns:140px 1fr auto;
   align-items:center;gap:2rem;
@@ -168,6 +182,7 @@ a.project-row{text-decoration:none;color:inherit;}
   transition:border-color var(--tr);background:var(--faint);
 }
 .p-thumb svg{position:absolute;inset:0;width:100%;height:100%;transition:opacity var(--tr);}
+.p-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .project-row:hover .p-thumb{border-color:var(--accent);}
 .p-thumb-bg{
   position:absolute;bottom:0;left:0;right:0;height:0%;
@@ -176,7 +191,6 @@ a.project-row{text-decoration:none;color:inherit;}
 }
 .project-row:hover .p-thumb-bg{height:55%;opacity:.22;}
 
-.p-mid{}
 .p-num{font-size:.56rem;letter-spacing:.1em;color:var(--muted);margin-bottom:.38rem;}
 .p-title{font-size:clamp(.95rem,1.7vw,1.4rem);font-weight:500;letter-spacing:-.02em;margin-bottom:.28rem;transition:color var(--tr);}
 .project-row:hover .p-title{color:var(--accent);}
@@ -293,6 +307,7 @@ footer{border-top:1px solid var(--border);padding:3rem;max-width:1080px;margin:0
   #hero{padding:5rem 1.5rem 2rem;}.hero-coord{display:none;}
   .hero-foot{grid-template-columns:1fr 1fr;}.hero-tags{display:none;}
   .s-wrap{padding:4rem 1.5rem;}
+  .work-tabs{flex-wrap:wrap;}
   .project-row{grid-template-columns:100px 1fr;}.p-right{display:none;}
   .about-grid,.brain-header{grid-template-columns:1fr;gap:3rem;}
   .about-manifesto{position:static;}
