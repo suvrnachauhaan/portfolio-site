@@ -1,3 +1,86 @@
+// PAGE LOADER
+function initPageLoader(){
+  if(document.getElementById('pageLoader')) return;
+
+  const doodles=[
+    `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="14" y="26" width="30" height="20" rx="4"/><path d="M44 31h5a5 5 0 0 1 0 10h-5"/><path d="M20 22c0-3 2-4 2-7"/><path d="M27 22c0-3 2-4 2-7"/></svg>`,
+    `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="18" width="44" height="30" rx="3"/><path d="M18 18v-6m10 6v-6m10 6v-6m10 6v-6"/><path d="M18 30h8m4 0h16m-28 8h20"/></svg>`,
+    `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M35 18a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10 10 10 0 0 1-10-10v-6a10 10 0 0 1 10-10z"/><path d="M20 31v3a15 15 0 0 0 30 0v-3"/><path d="M35 49v7"/><path d="M28 56h14"/></svg>`,
+    `<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="31" cy="12" r="4"/><path d="M31 16v14"/><path d="M31 25l-12 8"/><path d="M31 25l11 7"/><path d="M31 30l-8 14"/><path d="M31 30l12 15"/></svg>`,
+    `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 20h18v30H12z"/><path d="M30 22h20v28H30z"/><path d="M15 26h12m-12 7h12m18-6h-9m9 7h-9"/></svg>`,
+    `<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="10"/><path d="M32 12v8m0 24v8m20-20h-8m-24 0h-8m26.2-14.2-5.7 5.7m-12.9 12.9-5.7 5.7m24.3 0-5.7-5.7m-12.9-12.9-5.7-5.7"/></svg>`,
+    `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 26c4 0 4 4 8 4s4-4 8-4 4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4"/><path d="M10 36c4 0 4 4 8 4s4-4 8-4 4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4"/></svg>`
+  ];
+
+  document.body.classList.add('is-loading');
+  const loader=document.createElement('div');
+  loader.id='pageLoader';
+  loader.innerHTML=`
+    <div class="loader-box" role="status" aria-live="polite" aria-label="Loading page">
+      <div class="loader-doodle" id="loaderDoodle">${doodles[0]}</div>
+      <div class="loader-percent" id="loaderPercent">0%</div>
+      <div class="loader-text">Loading portfolio</div>
+    </div>
+  `;
+  document.body.prepend(loader);
+
+  const percentEl=document.getElementById('loaderPercent');
+  const doodleEl=document.getElementById('loaderDoodle');
+
+  let iconIdx=0;
+  const iconTimer=setInterval(()=>{
+    iconIdx=(iconIdx+1)%doodles.length;
+    doodleEl.innerHTML=doodles[iconIdx];
+  },620);
+
+  let progress=0;
+  let target=8;
+  let finished=false;
+
+  const progressTimer=setInterval(()=>{
+    if(progress<target){
+      progress=Math.min(progress+1,target);
+      percentEl.textContent=`${progress}%`;
+    }
+    if(finished && progress>=100){
+      clearInterval(progressTimer);
+      clearInterval(iconTimer);
+      loader.classList.add('done');
+      setTimeout(()=>{
+        loader.remove();
+        document.body.classList.remove('is-loading');
+      },520);
+    }
+  },22);
+
+  const driftTimer=setInterval(()=>{
+    if(finished){
+      target=100;
+      clearInterval(driftTimer);
+      return;
+    }
+    target=Math.min(92,target+Math.floor(Math.random()*10)+4);
+  },180);
+
+  window.addEventListener('load',()=>{
+    finished=true;
+    target=100;
+  },{once:true});
+
+  setTimeout(()=>{
+    if(!finished){
+      finished=true;
+      target=100;
+    }
+  },3600);
+}
+
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',initPageLoader,{once:true});
+}else{
+  initPageLoader();
+}
+
 // THEME
 const html=document.documentElement;
 const saved=localStorage.getItem('sc-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
