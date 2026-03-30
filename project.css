@@ -70,6 +70,14 @@
 .proj-img-full{
   margin:2rem 0;
 }
+.proj-img-full img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--faint);
+}
 .proj-img-placeholder{
   width:100%;aspect-ratio:16/9;
   border:1px solid var(--border);border-radius:var(--radius);
