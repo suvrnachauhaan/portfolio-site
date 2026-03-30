@@ -346,7 +346,7 @@ nav.filled{
 .m-dot{width:3px;height:3px;border-radius:50%;background:var(--accent-2);}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-.s-wrap{max-width:1160px;margin:0 auto;padding:6rem 3rem;}
+.s-wrap{max-width:1160px;margin:0 auto;padding:7.5rem 3rem;}
 .section-label{
   font-size:.62rem;
   letter-spacing:.24em;
@@ -654,7 +654,7 @@ footer{max-width:1160px;margin:0 auto;padding:3rem;border-top:1px dashed var(--b
   .hero-foot{grid-template-columns:1fr 1fr;gap:1rem;}
   .hero-tags{display:none;}
   .work-grid{grid-template-columns:1fr;}
-  .s-wrap{padding:4rem 1.4rem;}
+  .s-wrap{padding:5.25rem 1.4rem;}
   .about-grid,.brain-header{grid-template-columns:1fr;gap:2.5rem;}
   .about-manifesto{position:static;}
   .why-grid{grid-template-columns:1fr;}
