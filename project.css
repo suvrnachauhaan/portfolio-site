@@ -102,6 +102,14 @@
   color:var(--muted);
 }
 
+.proj-pdf-frame{
+  width:100%;
+  height:min(78vh,980px);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--surface);
+}
+
 .proj-two-col{
   display:grid;grid-template-columns:1fr 1fr;gap:1rem;
   margin:2rem 0;
@@ -153,6 +161,7 @@
   .proj-content{padding:0 1.5rem 4rem;}
   .proj-section{grid-template-columns:1fr;gap:1rem;}
   .proj-kv{grid-template-columns:1fr;}
+  .proj-pdf-frame{height:min(72vh,760px);}
   .proj-img-crop-top{max-height:760px;}
   .proj-img-crop-top img{height:760px;}
   .proj-two-col{grid-template-columns:1fr;}
