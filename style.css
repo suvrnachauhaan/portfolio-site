@@ -290,6 +290,17 @@ nav.filled{
 .hero-cutout .t5{background:#ff4fa3;color:#3d0b28;transform:translateY(7px) rotate(2deg);}
 .hero-cutout .t6{background:#0069ff;color:#fff47a;transform:translateY(-5px) rotate(7deg);}
 .hero-cutout .t7{background:#12d6df;color:#052b30;transform:translateY(6px) rotate(-5deg);}
+.hero-cutout .t6::after{display:none;}
+.hero-n-dot{
+  position:absolute;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#fff47a;
+  right:30%;
+  top:49%;
+  box-shadow:0 0 0 2px rgba(0,0,0,.18);
+}
 
 .hero-deck{
   max-width:920px;
@@ -702,6 +713,7 @@ footer{max-width:1160px;margin:0 auto;padding:3rem;border-top:1px dashed var(--b
   .hero-hi{font-size:clamp(1.35rem,5.4vw,2rem);}
   .hero-cutout{gap:.24rem;margin-bottom:1rem;}
   .hero-cutout .tile{width:clamp(38px,11vw,60px);height:clamp(58px,15vw,82px);font-size:clamp(2rem,8vw,3rem);}
+  .hero-n-dot{display:none;}
   .hero-deck{font-size:clamp(1.3rem,7.2vw,2rem);line-height:1.04;}
   .hero-like{font-size:.68rem;padding:.34rem .58rem;}
   .hero-resume-btn{font-size:.6rem;padding:.54rem .9rem;}
