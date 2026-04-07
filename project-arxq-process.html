@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>aRxQ Process at Western Digital - Suvarna Chauhan</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="project.css" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>RxQ Process at WD — Suvarna Chauhan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
-  <main class="container">
-    <article class="proj">
-      <section class="proj-header">
-        <a href="index.html#selected-works" class="proj-back">← Back to works</a>
-        <div class="proj-kv">
-          <div>
-            <div class="proj-label">Timeline</div>
-            <div class="proj-value">Confidential</div>
-          </div>
-          <div>
-            <div class="proj-label">Status</div>
-            <div class="proj-value">Under NDA</div>
-          </div>
-        </div>
-        <h1>aRxQ Process at Western Digital</h1>
-      </section>
+<div id="progress"></div>
+<div id="cdot"></div>
+<div id="cring"></div>
 
-      <div class="proj-section">
-        <div class="proj-label">Confidentiality Notice</div>
-        <div class="proj-text">
-          <p>This project was completed in collaboration with Western Digital under a Non-Disclosure Agreement (NDA). Due to confidentiality constraints, detailed information cannot be shared publicly, but I'd be happy to discuss my role, process, and key learnings in a conversation.</p>
-        </div>
+<nav id="navbar">
+  <a class="nav-name" href="index.html">Suvarna Chauhan</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#brain">Contact</a>
+    </div>
+    <button class="theme-btn" id="themeToggle"><span id="themeIcon">○</span><span id="themeLabel">Light</span></button>
+  </div>
+</nav>
+
+<section class="proj-hero">
+  <a href="index.html#selected-works" class="proj-back"><span class="back-arrow">←</span> Back to Work</a>
+  <div class="proj-hero-meta"><span class="proj-num">03</span><span class="proj-tag">UX Process</span></div>
+  <h1 class="proj-title">RxQ Process at WD</h1>
+  <p class="proj-subtitle">A confidential UX research and process project completed under NDA.</p>
+</section>
+
+<div class="proj-content">
+  <div class="proj-section">
+    <div class="proj-text">
+      <div class="proj-kv">
+        <div class="proj-kv-item"><div class="proj-kv-k">Status</div><div class="proj-kv-v">Under NDA</div></div>
+        <div class="proj-kv-item"><div class="proj-kv-k">Type</div><div class="proj-kv-v">Enterprise UX</div></div>
       </div>
+    </div>
+  </div>
 
-      <section class="proj-nav">
-        <a href="project-marriage-game.html" class="proj-next">Next project: Marriage Game →</a>
-      </section>
-    </article>
-  </main>
+  <div class="proj-section">
+    <div class="proj-label">Confidentiality Notice</div>
+    <div class="proj-text">
+      <p>This project was completed in collaboration with Western Digital under a Non-Disclosure Agreement (NDA). Due to confidentiality constraints, detailed information cannot be shared publicly, but I'd be happy to discuss my role, process, and key learnings in a conversation.</p>
+    </div>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="proj-next"><div class="proj-next-label">Next Project</div><a href="project-marriage-game.html" class="proj-next-link">Marriage Game →</a></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
