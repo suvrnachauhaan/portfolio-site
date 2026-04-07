@@ -225,7 +225,7 @@ nav.filled{
 }
 .hero-note-a{left:2%;top:11%;transform:rotate(-5deg);}
 .hero-note-b{left:0;top:43%;transform:rotate(-2deg);background:color-mix(in srgb,var(--accent-2) 12%, var(--surface));}
-.hero-note-c{right:2%;top:14%;transform:rotate(5deg);background:color-mix(in srgb,var(--accent-3) 10%, var(--surface));}
+.hero-note-c{right:2%;top:32%;transform:rotate(5deg);background:color-mix(in srgb,var(--accent-3) 10%, var(--surface));}
 
 .hero-doodle{
   position:absolute;
