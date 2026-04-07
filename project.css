@@ -69,14 +69,17 @@
 /* IMAGE PLACEHOLDERS */
 .proj-img-full{
   margin:2rem 0;
+  min-height:700px;
 }
 .proj-img-full img{
   width:100%;
-  height:auto;
+  height:100%;
   display:block;
   border:1px solid var(--border);
   border-radius:var(--radius);
   background:var(--faint);
+  object-fit:contain;
+  object-position:center;
 }
 .proj-img-crop-top{
   max-height:1200px;
